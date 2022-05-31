@@ -15,12 +15,14 @@ namespace EscrituraArchivos
             //Si ya existe, escribirá en el 
             //True es para agregar y no sobreescribir
 
-            string[] lines =
+
+            string[] lines = new string[3];
+            
+            for (int i =0; i<3; i++)
             {
-                "Esta es la nueva escritura",
-                "Esta es la segunda línea",
-                "Fin del texto",
-            };
+                Console.WriteLine("Escribe 3 nombres: ");
+                lines[i] = Console.ReadLine();
+            }
 
             //Recorrer el arreglo
             foreach (string line in lines)
