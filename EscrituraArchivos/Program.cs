@@ -8,6 +8,18 @@ namespace EscrituraArchivos
 {
     class Program
     {
+        public class Peliculas
+        {
+            public string[] Pelicula = new string[3];
+            public int[] Año = new int[3];
+
+
+            public Peliculas(string [] Pelicula, int [] Año)
+            {
+                this.Pelicula = Pelicula;
+                this.Año = Año;
+            }
+        }
         static void Main(string[] args)
         {
             StreamWriter sw = new StreamWriter("ejemplo.txt", true);
@@ -15,24 +27,27 @@ namespace EscrituraArchivos
             //Si ya existe, escribirá en el 
             //True es para agregar y no sobreescribir
 
+            string[] Pelicula = new string[3];
+            int[] Año = new int[3];
 
-            string[] lines = new string[3];
-            
-            for (int i =0; i<3; i++)
+            for (int i = 0; i<3; i++)
             {
-                Console.WriteLine("Escribe 3 nombres: ");
-                lines[i] = Console.ReadLine();
+                Console.WriteLine("Escribe el nombre de película: ");
+                Pelicula[i] = Console.ReadLine();
+
+                Console.WriteLine("Escriba el año de la película: ");
+                Año[i] = int.Parse(Console.ReadLine());
             }
 
-            //Recorrer el arreglo
-            foreach (string line in lines)
+            foreach (var kw in Pelicula.Zip(Año,Tuple.Create))  //Ahorrar llaves y otro foreach usando Tuple
             {
-                sw.WriteLine(line); //Escribe en el archivo
+                    sw.WriteLine(kw.Item1 + " del año " + kw.Item2);
             }
+
             sw.Close();   //Se debe cerrar el archivo
 
-            Console.WriteLine("Escribiendo en el archivo...");
-            Console.ReadLine();
+            Console.WriteLine("\nEscribiendo en el archivo...");
+            Console.ReadKey();
         }
     }
 }
