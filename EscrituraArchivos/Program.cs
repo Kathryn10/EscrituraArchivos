@@ -10,11 +10,10 @@ namespace EscrituraArchivos
     {
         public class Peliculas
         {
-            public string[] Pelicula = new string[3];
-            public int[] Año = new int[3];
+            public string Pelicula;
+            public int Año;
 
-
-            public Peliculas(string [] Pelicula, int [] Año)
+            public Peliculas(string Pelicula, int  Año)
             {
                 this.Pelicula = Pelicula;
                 this.Año = Año;
@@ -27,23 +26,22 @@ namespace EscrituraArchivos
             //Si ya existe, escribirá en el 
             //True es para agregar y no sobreescribir
 
-            string[] Pelicula = new string[3];
-            int[] Año = new int[3];
+            string Pelicula;
+            int Año;
 
-            for (int i = 0; i<3; i++)
+            for (int i = 0; i < 3; i++)
             {
                 Console.WriteLine("Escribe el nombre de película: ");
-                Pelicula[i] = Console.ReadLine();
-
+                Pelicula = Console.ReadLine();
                 Console.WriteLine("Escriba el año de la película: ");
-                Año[i] = int.Parse(Console.ReadLine());
-            }
+                Año = int.Parse(Console.ReadLine());
 
-            foreach (var kw in Pelicula.Zip(Año,Tuple.Create))  //Ahorrar llaves y otro foreach usando Tuple
-            {
-                    sw.WriteLine(kw.Item1 + " del año " + kw.Item2);
-            }
+                Console.Clear();
 
+                Peliculas Peli = new Peliculas(Pelicula, Año);
+
+                sw.WriteLine(Peli.Pelicula + "\t" + Peli.Año);
+            }
             sw.Close();   //Se debe cerrar el archivo
 
             Console.WriteLine("\nEscribiendo en el archivo...");
