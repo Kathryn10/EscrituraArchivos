@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2DE0BF45-1D00-4383-A4A3-B9D2FE0E4545}</ProjectGuid>
+    <ProjectGuid>{D658C782-B4DE-41D6-B659-58E4CAFCD93A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>EscrituraByte</RootNamespace>
-    <AssemblyName>EscrituraByte</AssemblyName>
+    <RootNamespace>EscrituraArchivos</RootNamespace>
+    <AssemblyName>EscrituraArchivos</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

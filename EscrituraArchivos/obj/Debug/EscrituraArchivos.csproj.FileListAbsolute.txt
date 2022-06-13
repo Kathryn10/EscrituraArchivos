@@ -1,0 +1,7 @@
+F:\GITHUB\EscrituraArchivos\bin\Debug\EscrituraArchivos.exe.config
+F:\GITHUB\EscrituraArchivos\bin\Debug\EscrituraArchivos.exe
+F:\GITHUB\EscrituraArchivos\bin\Debug\EscrituraArchivos.pdb
+F:\GITHUB\EscrituraArchivos\obj\Debug\EscrituraArchivos.csproj.AssemblyReference.cache
+F:\GITHUB\EscrituraArchivos\obj\Debug\EscrituraArchivos.csproj.CoreCompileInputs.cache
+F:\GITHUB\EscrituraArchivos\obj\Debug\EscrituraArchivos.exe
+F:\GITHUB\EscrituraArchivos\obj\Debug\EscrituraArchivos.pdb
